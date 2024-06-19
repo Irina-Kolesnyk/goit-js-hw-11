@@ -65,7 +65,12 @@ button:hover {
   justify-content: center;
   
 }
-
+.gallery-image:hover,
+.gallery-image:focus{
+  transition: transform 250ms linear;
+  box-shadow: 10px 10px 18px -12px rgb(115, 120, 175);
+    transform: scale(1.05);
+}
 .gallery-box {
   display: flex;
   flex-direction: column;
