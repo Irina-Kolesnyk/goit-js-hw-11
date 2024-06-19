@@ -1,5 +1,6 @@
 'use strict';
 import iziToast from 'izitoast';
+
 const gallery = document.getElementById('gallery');
 
 export function displayImages(images) {
@@ -24,6 +25,7 @@ export function displayImages(images) {
         <img src="${image.webformatURL}" alt="${image.tags}" width="400" height="280">
       </a>
       </div>
+      
        <div class="image-info">
           <div class="info-box>
           <p class="info-label">Likes:</p>
@@ -48,4 +50,15 @@ export function displayImages(images) {
     .join('');
 
   gallery.innerHTML = items;
+  lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+  }).refresh();
+}
+export function showLoader() {
+  refs.loader.classList.remove('hidden');
+}
+
+export function hideLoader() {
+  refs.loader.classList.add('hidden');
 }
