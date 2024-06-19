@@ -7,6 +7,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import imageUrl from './img/close.png';
+import {showLoader, hideLoader } from './js/render-functions.js';
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionsDelay: 250,
